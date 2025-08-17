@@ -1,0 +1,50 @@
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement for LeadTap
+title: "[FEATURE] <describe your idea>"
+labels: [enhancement]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea to improve LeadTap? Awesome. Share as much detail as you can.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature Summary
+      description: Briefly describe the feature or improvement
+      placeholder: e.g. "Integrate Zoom call summaries into lead profile"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case
+      description: Why do you need this feature? What problem does it solve?
+      placeholder: e.g. "Users often forget what was discussed on past calls"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested Solution
+      description: How would this ideally work?
+      placeholder: "e.g. After a Zoom call, fetch meeting transcript via API..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      options:
+        - 🟢 Nice to Have
+        - 🟡 Important
+        - 🔴 Critical
+      default: 1
+    validations:
+      required: true
